@@ -1,0 +1,45 @@
+﻿@model IEnumerable<CategoryModel>
+
+    <div class="py-5">
+        <div class="conteiner">
+
+            <div class="text-center mb-5">
+                <a class="btn btn-success" asp-action="Register" asp-controller="Category">Cadastrar nova categoria</a>
+            </div>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-0">
+
+                <table id="Emprestimos" class="table table-light table-hover mt-5">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">NOME</th>
+                            <th scope="col">DESCRIÇÂO</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null)
+                        {
+                            @if (Model.Count() > 0)
+                            {
+                                @foreach (var category in Model)
+                                {
+                                    <tr>
+                                        <th scope="row">@category.Id</th>
+                                        <td>@category.Name</td>
+                                        <td>@category.Description</td>
+                                        <td>
+                                            <a asp-controller="Category" asp-action="Update" asp-route-id="@category.Id" class="btn btn-warning mx-2"><i class="bi bi-pencil-square mx-2"></i>Editar</a>
+                                        <a asp-controller="Category" asp-action="Delete" asp-route-id="@category.Id" class="btn btn-danger mx-2"><i class="bi bi-trash3-fill mx-2"></i>Excluir</a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>

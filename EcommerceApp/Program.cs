@@ -1,4 +1,5 @@
 using EcommerceApp.Context;
+using EcommerceApp.DTO.Mappings;
 using EcommerceApp.Repositories;
 using EcommerceApp.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -14,8 +15,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<ICategory, CategoryRepository>();
 builder.Services.AddScoped<IProduct, ProductRepository>();
-builder.Services.AddScoped(typeof(IRepository<>), typeof(RepositoryRepository<>));
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+builder.Services.AddAutoMapper(typeof(DTOMappingProfile));
 
 var app = builder.Build();
 

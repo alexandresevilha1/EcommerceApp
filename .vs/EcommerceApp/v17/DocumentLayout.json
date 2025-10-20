@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FA6C775B-AA84-48BA-A690-EB67B525C7B9}|EcommerceApp\\EcommerceApp.csproj|c:\\users\\a l e x a n d r e\\desktop\\projetos\\ecommerceapp\\ecommerceapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA6C775B-AA84-48BA-A690-EB67B525C7B9}|EcommerceApp\\EcommerceApp.csproj|solutionrelative:ecommerceapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FA6C775B-AA84-48BA-A690-EB67B525C7B9}|EcommerceApp\\EcommerceApp.csproj|c:\\users\\a l e x a n d r e\\desktop\\projetos\\ecommerceapp\\ecommerceapp\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA6C775B-AA84-48BA-A690-EB67B525C7B9}|EcommerceApp\\EcommerceApp.csproj|solutionrelative:ecommerceapp\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA6C775B-AA84-48BA-A690-EB67B525C7B9}|EcommerceApp\\EcommerceApp.csproj|c:\\users\\a l e x a n d r e\\desktop\\projetos\\ecommerceapp\\ecommerceapp\\views\\category\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA6C775B-AA84-48BA-A690-EB67B525C7B9}|EcommerceApp\\EcommerceApp.csproj|solutionrelative:ecommerceapp\\views\\category\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp\\Program.cs",
-              "RelativeDocumentMoniker": "EcommerceApp\\Program.cs",
-              "ToolTip": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp\\Program.cs",
-              "RelativeToolTip": "EcommerceApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA2AAAAAAAAAA==",
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "EcommerceApp\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "EcommerceApp\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAuwF4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T12:12:25.197Z",
+              "WhenOpened": "2025-10-20T17:52:28.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp\\Views\\Category\\Delete.cshtml",
+              "RelativeDocumentMoniker": "EcommerceApp\\Views\\Category\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp\\Views\\Category\\Delete.cshtml",
+              "RelativeToolTip": "EcommerceApp\\Views\\Category\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-20T17:51:46.289Z",
               "EditorCaption": ""
             }
           ]

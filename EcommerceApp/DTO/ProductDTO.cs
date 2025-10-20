@@ -1,11 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace EcommerceApp.Models
+namespace EcommerceApp.DTO
 {
-    public class ProductModel
+    public class ProductDTO
     {
-        public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
 
@@ -18,6 +17,5 @@ namespace EcommerceApp.Models
 
 
         public int CategoryId { get; set; }
-        public CategoryModel? Category { get; set; }
     }
 }

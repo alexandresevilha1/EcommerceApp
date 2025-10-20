@@ -4,7 +4,7 @@ using EcommerceApp.Repositories.Interfaces;
 
 namespace EcommerceApp.Repositories
 {
-    public class ProductRepository : RepositoryRepository<ProductModel>, IProduct
+    public class ProductRepository : Repository<ProductModel>, IProduct
     {
         public ProductRepository(AppDbContext context) : base(context)
         {

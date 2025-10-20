@@ -5,11 +5,11 @@ using System.Linq.Expressions;
 
 namespace EcommerceApp.Repositories
 {
-    public class RepositoryRepository<T> : IRepository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : class
     {
         protected readonly AppDbContext _context;
 
-        public RepositoryRepository(AppDbContext context)
+        public Repository(AppDbContext context)
         {
             _context = context;
         }
@@ -27,14 +27,14 @@ namespace EcommerceApp.Repositories
         public T Create(T entity)
         {
             _context.Set<T>().AddAsync(entity);
-            _context.SaveChangesAsync();
+            //_context.SaveChangesAsync();
             return entity;
         }
 
         public T Update(T entity)
         {
             _context.Set<T>().Update(entity);
-            _context.SaveChangesAsync();
+            //_context.SaveChangesAsync();
             return entity;
 
         }
@@ -42,7 +42,7 @@ namespace EcommerceApp.Repositories
         public T Delete(T entity)
         {
             _context.Set<T>().Remove(entity);
-            _context.SaveChangesAsync();
+            //_context.SaveChangesAsync();
             return entity;
 
         }

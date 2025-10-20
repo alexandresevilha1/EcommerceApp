@@ -19,7 +19,7 @@ namespace EcommerceApp.Repositories
         {
             get
             {
-                return _productRepository = ProductRepository ?? new ProductRepository(_context);
+                return _productRepository = _productRepository ?? new ProductRepository(_context);
             }
         }
 
@@ -27,7 +27,7 @@ namespace EcommerceApp.Repositories
         {
             get 
             { 
-                return _categoryRepository = CategoryRepository ?? new CategoryRepository(_context); 
+                return _categoryRepository = _categoryRepository ?? new CategoryRepository(_context); 
             }
         }
 
