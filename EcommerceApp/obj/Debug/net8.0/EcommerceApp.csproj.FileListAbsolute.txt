@@ -169,3 +169,4 @@ C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp\bin\Debug\
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp\obj\Debug\net8.0\Ecommerc.7F121851.Up2Date
+C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp\obj\Debug\net8.0\EcommerceApp.sourcelink.json

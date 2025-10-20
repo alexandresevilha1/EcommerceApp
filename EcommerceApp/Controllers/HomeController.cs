@@ -1,26 +1,23 @@
 using System.Diagnostics;
 using EcommerceApp.Models;
+using EcommerceApp.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EcommerceApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IProduct _product;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IProduct product)
         {
-            _logger = logger;
+            _product = product;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
+            var products = await _product.GetAllAsync();
+            return View(products);
         }
     }
 }
