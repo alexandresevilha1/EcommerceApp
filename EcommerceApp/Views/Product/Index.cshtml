@@ -1,0 +1,58 @@
+﻿@model IEnumerable<EcommerceApp.Application.DTOs.ProductDTO>
+
+@{
+    ViewData["Title"] = "Lista de Produtos";
+}
+
+<div class="py-5">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <a class="btn btn-success" asp-action="Create" asp-controller="Product">Cadastrar novo Produto</a>
+        </div>
+
+        <div class="row">
+            <table id="Emprestimos" class="table table-light table-hover mt-5">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">NOME</th>
+                        <th scope="col">CATEGORIA</th>
+                        <th scope="col">PREÇO</th>
+                        <th scope="col">ESTOQUE</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        @foreach (var product in Model)
+                        {
+                            <tr>
+                                <th scope="row">@product.Id</th>
+                                <td>@product.Name</td>
+                                <td>@product.CategoryName</td>
+                                <td>@product.Price.ToString("C")</td>
+                                <td>@product.Stock</td>
+                                <td>
+                                    <a asp-controller="Product" asp-action="Edit" asp-route-id="@product.Id" class="btn btn-warning mx-2">
+                                        <i class="bi bi-pencil-square mx-2"></i>Editar
+                                    </a>
+                                    <a asp-controller="Product" asp-action="Delete" asp-route-id="@product.Id" class="btn btn-danger mx-2">
+                                        <i class="bi bi-trash3-fill mx-2"></i>Excluir
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="6" class="text-center">Nenhum produto cadastrado.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

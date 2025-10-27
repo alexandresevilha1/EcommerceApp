@@ -1,15 +1,14 @@
 using System.Diagnostics;
-using EcommerceApp.Models;
-using EcommerceApp.Repositories.Interfaces;
+using EcommerceApp.Core.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EcommerceApp.Controllers
+namespace EcommerceApp.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IProduct _product;
+        private readonly IProductRepository _product;
 
-        public HomeController(IProduct product)
+        public HomeController(IProductRepository product)
         {
             _product = product;
         }

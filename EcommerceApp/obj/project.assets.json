@@ -1630,6 +1630,44 @@
             "rid": "win"
           }
         }
+      },
+      "EcommerceApp.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "EcommerceApp.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EcommerceApp.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EcommerceApp.Application.dll": {}
+        }
+      },
+      "EcommerceApp.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/EcommerceApp.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EcommerceApp.Core.dll": {}
+        }
+      },
+      "EcommerceApp.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "EcommerceApp.Application": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.10"
+        },
+        "compile": {
+          "bin/placeholder/EcommerceApp.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EcommerceApp.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -4771,12 +4809,29 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "EcommerceApp.Application/1.0.0": {
+      "type": "project",
+      "path": "../EcommerceApp.Application/EcommerceApp.Application.csproj",
+      "msbuildProject": "../EcommerceApp.Application/EcommerceApp.Application.csproj"
+    },
+    "EcommerceApp.Core/1.0.0": {
+      "type": "project",
+      "path": "../EcommerceApp.Core/EcommerceApp.Core.csproj",
+      "msbuildProject": "../EcommerceApp.Core/EcommerceApp.Core.csproj"
+    },
+    "EcommerceApp.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../EcommerceApp.Infrastructure/EcommerceApp.Infrastructure.csproj",
+      "msbuildProject": "../EcommerceApp.Infrastructure/EcommerceApp.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
+      "EcommerceApp.Application >= 1.0.0",
+      "EcommerceApp.Infrastructure >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 9.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.10",
@@ -4790,9 +4845,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp\\EcommerceApp.csproj",
-      "projectName": "EcommerceApp",
-      "projectPath": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp\\EcommerceApp.csproj",
+      "projectUniqueName": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp\\EcommerceApp.Web.csproj",
+      "projectName": "EcommerceApp.Web",
+      "projectPath": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp\\EcommerceApp.Web.csproj",
       "packagesPath": "C:\\Users\\A l e x a n d r e\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp\\obj\\",
       "projectStyle": "PackageReference",
@@ -4815,7 +4870,14 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp.Application\\EcommerceApp.Application.csproj": {
+              "projectPath": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp.Application\\EcommerceApp.Application.csproj"
+            },
+            "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp.Infrastructure\\EcommerceApp.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp.Infrastructure\\EcommerceApp.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

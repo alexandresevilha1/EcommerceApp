@@ -1,0 +1,16 @@
+C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Application\bin\Debug\net8.0\EcommerceApp.Application.deps.json
+C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Application\bin\Debug\net8.0\EcommerceApp.Application.dll
+C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Application\bin\Debug\net8.0\EcommerceApp.Application.pdb
+C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Application\bin\Debug\net8.0\EcommerceApp.Core.dll
+C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Application\bin\Debug\net8.0\EcommerceApp.Core.pdb
+C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Application\obj\Debug\net8.0\EcommerceApp.Application.csproj.AssemblyReference.cache
+C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Application\obj\Debug\net8.0\EcommerceApp.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Application\obj\Debug\net8.0\EcommerceApp.Application.AssemblyInfoInputs.cache
+C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Application\obj\Debug\net8.0\EcommerceApp.Application.AssemblyInfo.cs
+C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Application\obj\Debug\net8.0\EcommerceApp.Application.csproj.CoreCompileInputs.cache
+C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Application\obj\Debug\net8.0\EcommerceApp.Application.sourcelink.json
+C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Application\obj\Debug\net8.0\Ecommerc.93288879.Up2Date
+C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Application\obj\Debug\net8.0\EcommerceApp.Application.dll
+C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Application\obj\Debug\net8.0\refint\EcommerceApp.Application.dll
+C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Application\obj\Debug\net8.0\EcommerceApp.Application.pdb
+C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Application\obj\Debug\net8.0\ref\EcommerceApp.Application.dll
