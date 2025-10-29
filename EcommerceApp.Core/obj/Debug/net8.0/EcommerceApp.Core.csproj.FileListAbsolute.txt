@@ -1,6 +1,7 @@
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Core\bin\Debug\net8.0\EcommerceApp.Core.deps.json
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Core\bin\Debug\net8.0\EcommerceApp.Core.dll
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Core\bin\Debug\net8.0\EcommerceApp.Core.pdb
+C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Core\obj\Debug\net8.0\EcommerceApp.Core.csproj.AssemblyReference.cache
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Core\obj\Debug\net8.0\EcommerceApp.Core.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Core\obj\Debug\net8.0\EcommerceApp.Core.AssemblyInfoInputs.cache
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Core\obj\Debug\net8.0\EcommerceApp.Core.AssemblyInfo.cs

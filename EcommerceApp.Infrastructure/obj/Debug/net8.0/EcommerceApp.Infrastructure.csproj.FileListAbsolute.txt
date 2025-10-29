@@ -2,9 +2,7 @@ C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Infrastruc
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Infrastructure\bin\Debug\net8.0\EcommerceApp.Infrastructure.runtimeconfig.json
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Infrastructure\bin\Debug\net8.0\EcommerceApp.Infrastructure.dll
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Infrastructure\bin\Debug\net8.0\EcommerceApp.Infrastructure.pdb
-C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Infrastructure\bin\Debug\net8.0\EcommerceApp.Application.dll
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Infrastructure\bin\Debug\net8.0\EcommerceApp.Core.dll
-C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Infrastructure\bin\Debug\net8.0\EcommerceApp.Application.pdb
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Infrastructure\bin\Debug\net8.0\EcommerceApp.Core.pdb
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Infrastructure\obj\Debug\net8.0\EcommerceApp.Infrastructure.csproj.AssemblyReference.cache
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp.Infrastructure\obj\Debug\net8.0\EcommerceApp.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
