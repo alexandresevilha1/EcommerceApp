@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using EcommerceApp.Application.Services.Interfaces;
 using EcommerceApp.Core.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,16 +7,16 @@ namespace EcommerceApp.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IProductRepository _product;
+        private readonly IProductService _productService;
 
-        public HomeController(IProductRepository product)
+        public HomeController(IProductService productService)
         {
-            _product = product;
+            _productService = productService;
         }
 
         public async Task<IActionResult> Index()
         {
-            var products = await _product.GetAllAsync();
+            var products = await _productService.GetAllAsync();
             return View(products);
         }
     }

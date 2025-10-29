@@ -35,7 +35,7 @@
                                 <td>@product.Price.ToString("C")</td>
                                 <td>@product.Stock</td>
                                 <td>
-                                    <a asp-controller="Product" asp-action="Edit" asp-route-id="@product.Id" class="btn btn-warning mx-2">
+                                    <a asp-controller="Product" asp-action="Update" asp-route-id="@product.Id" class="btn btn-warning mx-2">
                                         <i class="bi bi-pencil-square mx-2"></i>Editar
                                     </a>
                                     <a asp-controller="Product" asp-action="Delete" asp-route-id="@product.Id" class="btn btn-danger mx-2">

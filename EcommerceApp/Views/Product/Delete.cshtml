@@ -1,0 +1,57 @@
+﻿@using EcommerceApp.Application.DTOs
+@model ProductDTO
+
+@{
+    ViewData["Title"] = "Excluir Produto";
+}
+
+<div class="container mt-5">
+    <h2>Excluir Produto</h2>
+    <h3 class="text-danger">Você tem certeza que deseja excluir este produto?</h3>
+    <h4 class="text-danger">Esta ação não pode ser desfeita.</h4>
+    <hr />
+
+    <div>
+        <h4>@Model.Name</h4>
+        <dl class="row">
+            <dt class="col-sm-2">
+                Descrição
+            </dt>
+            <dd class="col-sm-10">
+                @Model.Description
+            </dd>
+
+            <dt class="col-sm-2">
+                Categoria
+            </dt>
+            <dd class="col-sm-10">
+                @Model.CategoryName
+            </dd>
+
+            <dt class="col-sm-2">
+                Preço
+            </dt>
+            <dd class="col-sm-10">
+                @Model.Price.ToString("C")
+            </dd>
+
+            <dt class="col-sm-2">
+                Estoque
+            </dt>
+            <dd class="col-sm-10">
+                @Model.Stock
+            </dd>
+        </dl>
+        <form asp-action="Delete" asp-route-id="@Model.Id" method="post">
+
+            <div class="btn-box d-flex mt-3">
+                <button type="submit" class="btn btn-danger w-50 mx-1">
+                    <i class="bi bi-trash3-fill"></i> Confirmar Exclusão
+                </button>
+                <a class="btn btn-info w-50" asp-controller="Product" asp-action="Index">
+                    <i class="bi bi-arrow-left-circle"></i> Voltar
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
