@@ -1,0 +1,55 @@
+﻿@model IEnumerable<EcommerceApp.Application.DTOs.ProductDTO>
+
+@{
+    ViewData["Title"] = $"Resultados para \"{ViewBag.Query}\"";
+}
+
+<div class="container py-5">
+    <div class="text-center mb-4">
+        <h1 class="display-5">Resultados da Busca</h1>
+        <p class="lead text-muted">Exibindo resultados para: "@ViewBag.Query"</p>
+    </div>
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+            @foreach (var product in Model)
+            {
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+
+                        <img src="@(string.IsNullOrEmpty(product.ImageURL) ? "https://via.placeholder.com/300x200?text=Sem+Imagem" : product.ImageURL)"
+                             class="card-img-top" alt="@product.Name" style="height: 200px; object-fit: cover;">
+
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">@product.Name</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">@product.CategoryName</h6>
+
+                            <p class="card-text small">
+                                @product.Description
+                            </p>
+
+                            <div class="mt-auto">
+                                <p class="card-text fs-5 fw-bold text-success">
+                                    @product.Price.ToString("C")
+                                </p>
+
+                                <a href="#" class="btn btn-primary w-100">
+                                    <i class="bi bi-cart-plus"></i> Adicionar ao Carrinho
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="text-center">
+            <p class="lead">Nenhum produto encontrado para "@ViewBag.Query".</p>
+            <a asp-action="Index" asp-controller="Home" class="btn btn-secondary">Voltar para a Home</a>
+        </div>
+    }
+</div>

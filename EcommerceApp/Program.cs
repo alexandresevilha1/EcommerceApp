@@ -4,6 +4,7 @@ using EcommerceApp.Application.Services.Interfaces;
 using EcommerceApp.Core.Entities;
 using EcommerceApp.Core.Repositories;
 using EcommerceApp.Infrastructure.Context;
+using EcommerceApp.Infrastructure.Identity;
 using EcommerceApp.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -23,8 +24,24 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
     options.Password.RequireUppercase = false;
     options.Password.RequireNonAlphanumeric = false;
     options.Password.RequiredLength = 6;
+
+    //A setting to block login attempts, a crucial security measure that prevents brute-force attacks.
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
+    options.Lockout.MaxFailedAccessAttempts = 5;
+    options.Lockout.AllowedForNewUsers = true;
 })
     .AddDefaultTokenProviders();
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    //configuration to log out the user due to inactivity
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+    options.SlidingExpiration = true;
+
+    options.LoginPath = "/Identity/Account/Login";
+    options.LogoutPath = "/Identity/Account/Logout";
+    options.AccessDeniedPath = "/Identity/Account/AccessDenied";
+});
 
 
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -51,6 +68,20 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var logger = services.GetRequiredService<ILogger<Program>>();
+    try
+    {
+        await IdentityDataSeeder.SeedRolesAndAdminAsync(services, logger);
+    }
+    catch (Exception ex)
+    {
+        logger.LogError(ex, "Um erro ocorreu ao semear os dados do Identity.");
+    }
+}
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

@@ -19,5 +19,20 @@ namespace EcommerceApp.Web.Controllers
             var products = await _productService.GetAllAsync();
             return View(products);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Search(string query)
+        {
+            if (string.IsNullOrWhiteSpace(query))
+            {
+                return RedirectToAction("Index");
+            }
+
+            var products = await _productService.SearchAsync(query);
+
+            ViewBag.Query = query;
+
+            return View(products);
+        }
     }
 }

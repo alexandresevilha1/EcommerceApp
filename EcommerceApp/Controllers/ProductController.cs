@@ -1,10 +1,12 @@
-﻿using EcommerceApp.Application.Services.Interfaces;
-using EcommerceApp.Application.DTOs;
+﻿using EcommerceApp.Application.DTOs;
+using EcommerceApp.Application.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace EcommerceApp.Web.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ProductController : Controller
     {
         private readonly IProductService _productService;

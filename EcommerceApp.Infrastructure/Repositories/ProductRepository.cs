@@ -34,5 +34,19 @@ namespace EcommerceApp.Infrastructure.Repositories
                                  .Include(p => p.Category)
                                  .FirstOrDefaultAsync(p => p.Id == id);
         }
+
+        public async Task<IEnumerable<ProductModel>> SearchByNameOrCategoryAsync(string query)
+        {
+            var lowerCaseQuery = query.ToLower();
+
+
+                return await _context.Set<ProductModel>()
+                .Include(p => p.Category)
+                .Where(p =>
+                    p.Name.ToLower().Contains(lowerCaseQuery) ||
+                    p.Category.Name.ToLower().Contains(lowerCaseQuery))
+                .AsNoTracking()
+                .ToListAsync();
+        }
     }
 }

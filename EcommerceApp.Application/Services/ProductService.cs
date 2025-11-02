@@ -34,6 +34,13 @@ namespace EcommerceApp.Application.Services
             return _mapper.Map<IEnumerable<ProductDTO>>(products);
         }
 
+        public async Task<IEnumerable<ProductDTO>> SearchAsync(string query)
+        {
+            var products = await _uof.ProductRepository.SearchByNameOrCategoryAsync(query);
+
+            return _mapper.Map<IEnumerable<ProductDTO>>(products);
+        }
+
         public async Task CreateAsync(ProductDTO productDto)
         {
             var product = _mapper.Map<ProductModel>(productDto);

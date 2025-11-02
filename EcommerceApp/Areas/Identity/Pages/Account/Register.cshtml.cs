@@ -95,8 +95,10 @@ namespace EcommerceApp.Web.Areas.Identity.Pages.Account
                 {
                     _logger.LogInformation("Usuário criou uma nova conta com senha.");
 
+                    await _userManager.AddToRoleAsync(user, "Cliente");
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(
                         "/Account/ConfirmEmail",
