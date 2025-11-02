@@ -60,6 +60,3 @@ O projeto foi refatorado para seguir estritamente os princípios da **Arquitetur
 * **AutoMapper**
 * **Padrão Repositório Genérico (Repository Pattern)**
 * **Padrão Unit of Work**
-4.  **Execute o Projeto:**
-    * No Visual Studio, defina `EcommerceApp.Web` como o projeto de inicialização (clique direito > "Definir como Projeto de Inicialização").
-    * Rode o projeto (F5 ou `dotnet run --project EcommerceApp.Web`).
