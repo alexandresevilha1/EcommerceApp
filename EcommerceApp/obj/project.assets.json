@@ -2894,7 +2894,10 @@
         },
         "runtime": {
           "bin/placeholder/EcommerceApp.Application.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "EcommerceApp.Core/1.0.0": {
         "type": "project",

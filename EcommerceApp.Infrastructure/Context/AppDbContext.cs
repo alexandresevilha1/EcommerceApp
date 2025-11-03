@@ -12,6 +12,8 @@ namespace EcommerceApp.Infrastructure.Context
 
         public DbSet<ProductModel> Products { get; set; }
         public DbSet<CategoryModel> Categorys { get; set; }
+        public DbSet<CartModel> Carts { get; set; }
+        public DbSet<CartItemModel> CartItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -38,6 +40,19 @@ namespace EcommerceApp.Infrastructure.Context
                 .IsRequired()
                 .HasMaxLength(200);
             });
+
+            modelBuilder.Entity<CartModel>()
+                .HasOne(c => c.ApplicationUser)
+                .WithOne()
+                .HasForeignKey<CartModel>(c => c.ApplicationUserId)
+                .IsRequired()
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<CartItemModel>()
+                .HasOne(ic => ic.Product)
+                .WithMany()
+                .HasForeignKey(ic => ic.ProductId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

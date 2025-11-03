@@ -34,20 +34,19 @@
                         }
                         else
                         {
-                        <li class="nav-item w-75">
-                            <form class="d-flex" asp-controller="Home" asp-action="Search" method="get">
-                                <input class="form-control me-2" type="search" placeholder="Buscar produtos..." aria-label="Search" name="query">
-                                <button class="btn btn-outline-primary" type="submit">
-                                    <i class="bi bi-search"></i>
-                                </button>
-                            </form>
-                        </li>
+                            <li class="nav-item w-75">
+                                <form class="d-flex" asp-controller="Home" asp-action="Search" method="get">
+                                    <input class="form-control me-2" type="search" placeholder="Buscar produtos..." aria-label="Search" name="query">
+                                    <button class="btn btn-outline-primary" type="submit">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                </form>
+                            </li>
                         }
                     </ul>
 
                     <ul class="navbar-nav">
-
-                        @if (User.Identity.IsAuthenticated && User.IsInRole("Cliente"))
+                        @if (!User.IsInRole("Admin"))
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-controller="Cart" asp-action="Index" title="Carrinho">
@@ -55,6 +54,7 @@
                                 </a>
                             </li>
                         }
+
                         <partial name="_LoginPartial" />
                     </ul>
 

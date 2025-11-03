@@ -1,0 +1,107 @@
+﻿@model EcommerceApp.Application.DTOs.CartDTO
+
+@{
+    ViewData["Title"] = "Meu Carrinho de Compras";
+}
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="mb-4">@ViewData["Title"]</h2>
+        </div>
+    </div>
+
+    @if (Model == null || !Model.Itens.Any())
+    {
+        <div class="text-center">
+            <p class="lead">Seu carrinho está vazio.</p>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Continuar Comprando</a>
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-lg-8">
+                <table class="table align-middle">
+                    <thead>
+                        <tr>
+                            <th scope="col" colspan="2">Produto</th>
+                            <th scope="col">Preço</th>
+                            <th scope="col" style="width: 150px;">Quantidade</th>
+                            <th scope="col">Subtotal</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Itens)
+                        {
+                            <tr>
+                                <td>
+                                    <img src="@(string.IsNullOrEmpty(item.ProductUrlImage) ? "https://via.placeholder.com/100" : item.ProductUrlImage)"
+                                         alt="@item.ProductName" style="width: 100px; height: 100px; object-fit: cover;" />
+                                </td>
+                                <td>
+                                    <a asp-controller="Product" asp-action="Details" asp-route-id="@item.ProductId" class="text-dark text-decoration-none">
+                                        @item.ProductName
+                                    </a>
+                                </td>
+                                <td>@item.ProductPrice.ToString("C")</td>
+
+                                <td>
+                                    <form asp-controller="Cart" asp-action="UpdateQuantity" method="post" class="d-flex">
+                                        <input type="hidden" name="productId" value="@item.ProductId" />
+
+                                        <input type="number" name="newQuantity" value="@item.Quantity" class="form-control form-control-sm" style="width: 70px;" min="1" />
+
+                                        <button type="submit" class="btn btn-outline-secondary btn-sm ms-2" title="Atualizar">
+                                            <i class="bi bi-arrow-repeat"></i>
+                                        </button>
+                                    </form>
+                                </td>
+
+                                <td>@item.Subtotal.ToString("C")</td>
+
+                                <td>
+                                    <form asp-controller="Cart" asp-action="RemoveFromCart" method="post">
+                                        <input type="hidden" name="productId" value="@item.ProductId" />
+                                        <button type="submit" class="btn btn-danger btn-sm" title="Remover">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Resumo do Pedido</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between">
+                                <strong>Total:</strong>
+                                <span class="fw-bold fs-5 text-success">@Model.TotalCarrinho.ToString("C")</span>
+                            </li>
+                        </ul>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="#" class="btn btn-success btn-lg">Finalizar Compra</a>
+                            <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">Continuar Comprando</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-3">
+                    <form asp-controller="Cart" asp-action="ClearCart" method="post">
+                        <button type="submit" class="btn btn-outline-danger btn-sm">Limpar Carrinho</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+}
