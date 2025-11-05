@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FA6C775B-AA84-48BA-A690-EB67B525C7B9}|EcommerceApp\\EcommerceApp.Web.csproj|c:\\users\\a l e x a n d r e\\desktop\\projetos\\ecommerceapp\\ecommerceapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FA6C775B-AA84-48BA-A690-EB67B525C7B9}|EcommerceApp\\EcommerceApp.Web.csproj|solutionrelative:ecommerceapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C1520EC5-4331-4423-9AE9-478283452BA4}|EcommerceApp.Infrastructure\\EcommerceApp.Infrastructure.csproj|c:\\users\\a l e x a n d r e\\desktop\\projetos\\ecommerceapp\\ecommerceapp.infrastructure\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1520EC5-4331-4423-9AE9-478283452BA4}|EcommerceApp.Infrastructure\\EcommerceApp.Infrastructure.csproj|solutionrelative:ecommerceapp.infrastructure\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C57480A-AAB2-4534-BCDC-89819F1EC54C}|EcommerceApp.Application\\EcommerceApp.Application.csproj|c:\\users\\a l e x a n d r e\\desktop\\projetos\\ecommerceapp\\ecommerceapp.application\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C57480A-AAB2-4534-BCDC-89819F1EC54C}|EcommerceApp.Application\\EcommerceApp.Application.csproj|solutionrelative:ecommerceapp.application\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C57480A-AAB2-4534-BCDC-89819F1EC54C}|EcommerceApp.Application\\EcommerceApp.Application.csproj|c:\\users\\a l e x a n d r e\\desktop\\projetos\\ecommerceapp\\ecommerceapp.application\\extensions\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C57480A-AAB2-4534-BCDC-89819F1EC54C}|EcommerceApp.Application\\EcommerceApp.Application.csproj|solutionrelative:ecommerceapp.application\\extensions\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C57480A-AAB2-4534-BCDC-89819F1EC54C}|EcommerceApp.Application\\EcommerceApp.Application.csproj|c:\\users\\a l e x a n d r e\\desktop\\projetos\\ecommerceapp\\ecommerceapp.application\\ecommerceapp.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{7C57480A-AAB2-4534-BCDC-89819F1EC54C}|EcommerceApp.Application\\EcommerceApp.Application.csproj|solutionrelative:ecommerceapp.application\\ecommerceapp.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA6C775B-AA84-48BA-A690-EB67B525C7B9}|EcommerceApp\\EcommerceApp.Web.csproj|c:\\users\\a l e x a n d r e\\desktop\\projetos\\ecommerceapp\\ecommerceapp\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FA6C775B-AA84-48BA-A690-EB67B525C7B9}|EcommerceApp\\EcommerceApp.Web.csproj|solutionrelative:ecommerceapp\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA6C775B-AA84-48BA-A690-EB67B525C7B9}|EcommerceApp\\EcommerceApp.Web.csproj|c:\\users\\a l e x a n d r e\\desktop\\projetos\\ecommerceapp\\ecommerceapp\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA6C775B-AA84-48BA-A690-EB67B525C7B9}|EcommerceApp\\EcommerceApp.Web.csproj|solutionrelative:ecommerceapp\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C1520EC5-4331-4423-9AE9-478283452BA4}|EcommerceApp.Infrastructure\\EcommerceApp.Infrastructure.csproj|c:\\users\\a l e x a n d r e\\desktop\\projetos\\ecommerceapp\\ecommerceapp.infrastructure\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1520EC5-4331-4423-9AE9-478283452BA4}|EcommerceApp.Infrastructure\\EcommerceApp.Infrastructure.csproj|solutionrelative:ecommerceapp.infrastructure\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,79 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "EcommerceApp\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "EcommerceApp\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-03T00:39:28.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SessionExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp.Application\\Extensions\\SessionExtensions.cs",
-              "RelativeDocumentMoniker": "EcommerceApp.Application\\Extensions\\SessionExtensions.cs",
-              "ToolTip": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp.Application\\Extensions\\SessionExtensions.cs",
-              "RelativeToolTip": "EcommerceApp.Application\\Extensions\\SessionExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAiAAAAAAAAAA==",
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp.Infrastructure\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "EcommerceApp.Infrastructure\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp.Infrastructure\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "EcommerceApp.Infrastructure\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAmwDcAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T00:37:22.402Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EcommerceApp.Application",
-              "DocumentMoniker": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp.Application\\EcommerceApp.Application.csproj",
-              "RelativeDocumentMoniker": "EcommerceApp.Application\\EcommerceApp.Application.csproj",
-              "ToolTip": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp.Application\\EcommerceApp.Application.csproj",
-              "RelativeToolTip": "EcommerceApp.Application\\EcommerceApp.Application.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-03T00:36:07.375Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp\\Views\\Cart\\Index.cshtml",
-              "RelativeDocumentMoniker": "EcommerceApp\\Views\\Cart\\Index.cshtml",
-              "ToolTip": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp\\Views\\Cart\\Index.cshtml",
-              "RelativeToolTip": "EcommerceApp\\Views\\Cart\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-03T00:33:36.585Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CartController.cs",
-              "DocumentMoniker": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp\\Controllers\\CartController.cs",
-              "RelativeDocumentMoniker": "EcommerceApp\\Controllers\\CartController.cs",
-              "ToolTip": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp\\Controllers\\CartController.cs",
-              "RelativeToolTip": "EcommerceApp\\Controllers\\CartController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T00:33:32.428Z",
+              "WhenOpened": "2025-11-05T18:19:45.175Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CartService.cs",
-              "DocumentMoniker": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp.Application\\Services\\CartService.cs",
-              "RelativeDocumentMoniker": "EcommerceApp.Application\\Services\\CartService.cs",
-              "ToolTip": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp.Application\\Services\\CartService.cs",
-              "RelativeToolTip": "EcommerceApp.Application\\Services\\CartService.cs",
-              "ViewState": "AgIAAL8AAAAAAAAAAAASwMsAAAAlAAAAAAAAAA==",
+              "Title": "CartRepository.cs",
+              "DocumentMoniker": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp.Infrastructure\\Repositories\\CartRepository.cs",
+              "RelativeDocumentMoniker": "EcommerceApp.Infrastructure\\Repositories\\CartRepository.cs",
+              "ToolTip": "C:\\Users\\A l e x a n d r e\\Desktop\\Projetos\\EcommerceApp\\EcommerceApp.Infrastructure\\Repositories\\CartRepository.cs",
+              "RelativeToolTip": "EcommerceApp.Infrastructure\\Repositories\\CartRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T00:33:14.771Z",
+              "WhenOpened": "2025-11-05T18:19:02.576Z",
               "EditorCaption": ""
             }
           ]

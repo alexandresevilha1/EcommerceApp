@@ -8,15 +8,22 @@ using System.Threading.Tasks;
 
 namespace EcommerceApp.Core.Entities
 {
-    public class CartItemModel
+    public class OrderItemModel
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+
         public int Quantity { get; set; }
+
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal Price { get; set; }
+
         public int ProductId { get; set; }
+
+        public int OrderId { get; set; }
+
         public virtual ProductModel Product { get; set; }
-        public int CartId { get; set; }
-        public virtual CartModel Cart { get; set; }
+        public virtual OrderModel Order { get; set; }
     }
 }

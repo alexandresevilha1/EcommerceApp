@@ -27,13 +27,21 @@
                             <p class="card-text small">
                                 @product.Description
                             </p>
+
                             <div class="mt-auto">
                                 <p class="card-text fs-5 fw-bold text-success">
                                     @product.Price.ToString("C")
                                 </p>
-                                <a href="#" class="btn btn-primary w-100">
-                                    <i class="bi bi-cart-plus"></i> Adicionar ao Carrinho
-                                </a>
+
+                                <form asp-controller="Cart" asp-action="AddToCart" method="post">
+
+                                    <input type="hidden" name="productId" value="@product.Id" />
+                                    <input type="hidden" name="returnUrl" value="@Context.Request.Path@Context.Request.QueryString" />
+
+                                    <button type="submit" class="btn btn-primary w-100">
+                                        <i class="bi bi-cart-plus"></i> Adicionar ao Carrinho
+                                    </button>
+                                </form>
                             </div>
                         </div>
                     </div>

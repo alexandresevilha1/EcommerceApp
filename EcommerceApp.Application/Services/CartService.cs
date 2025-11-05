@@ -39,7 +39,10 @@ namespace EcommerceApp.Application.Services
         public async Task AddItemAsync(int productId, int quantity = 1)
         {
             var product = await _uof.ProductRepository.GetByIdAsync(productId);
-            if (product == null) throw new Exception("Produto não encontrado.");
+            if (product == null)
+            {
+                throw new Exception("Produto não encontrado.");
+            }
 
             var userId = GetUserId();
             if (string.IsNullOrEmpty(userId))
@@ -53,7 +56,14 @@ namespace EcommerceApp.Application.Services
                 }
                 else
                 {
-                    cart.Itens.Add(_mapper.Map<CartItemDTO>(product));
+                    cart.Itens.Add(new CartItemDTO
+                    {
+                        ProductId = product.Id,
+                        ProductName = product.Name,
+                        ProductPrice = product.Price,
+                        ProductUrlImage = product.ImageURL,
+                        Quantity = quantity
+                    });
                 }
                 SaveSessionCart(cart);
             }
@@ -71,7 +81,7 @@ namespace EcommerceApp.Application.Services
                 {
                     var newItem = new CartItemModel
                     {
-                        Id = cart.Id,
+                        CartId = cart.Id,
                         ProductId = productId,
                         Quantity = quantity
                     };
@@ -180,7 +190,7 @@ namespace EcommerceApp.Application.Services
                 {
                     var newItem = new CartItemModel
                     {
-                        Id = dbCart.Id,
+                        CartId = dbCart.Id,
                         ProductId = sessionItem.ProductId,
                         Quantity = sessionItem.Quantity
                     };

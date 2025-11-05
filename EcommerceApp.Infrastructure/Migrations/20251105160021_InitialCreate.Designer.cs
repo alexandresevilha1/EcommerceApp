@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EcommerceApp.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251102233900_InitialCreate")]
+    [Migration("20251105160021_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -332,7 +332,7 @@ namespace EcommerceApp.Infrastructure.Migrations
             modelBuilder.Entity("EcommerceApp.Core.Entities.CartItemModel", b =>
                 {
                     b.HasOne("EcommerceApp.Core.Entities.CartModel", "Cart")
-                        .WithMany("Itens")
+                        .WithMany()
                         .HasForeignKey("CartId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -419,11 +419,6 @@ namespace EcommerceApp.Infrastructure.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("EcommerceApp.Core.Entities.CartModel", b =>
-                {
-                    b.Navigation("Itens");
                 });
 
             modelBuilder.Entity("EcommerceApp.Core.Entities.CategoryModel", b =>

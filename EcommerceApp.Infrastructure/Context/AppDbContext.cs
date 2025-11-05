@@ -41,18 +41,33 @@ namespace EcommerceApp.Infrastructure.Context
                 .HasMaxLength(200);
             });
 
-            modelBuilder.Entity<CartModel>()
-                .HasOne(c => c.ApplicationUser)
-                .WithOne()
-                .HasForeignKey<CartModel>(c => c.ApplicationUserId)
-                .IsRequired()
-                .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<CartModel>(entity =>
+            {
+                entity.HasOne(c => c.ApplicationUser)
+                    .WithOne()
+                    .HasForeignKey<CartModel>(c => c.ApplicationUserId)
+                    .IsRequired()
+                    .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<CartItemModel>()
-                .HasOne(ic => ic.Product)
-                .WithMany()
-                .HasForeignKey(ic => ic.ProductId)
-                .OnDelete(DeleteBehavior.Cascade);
+                entity.HasMany(c => c.Itens)
+                    .WithOne(ci => ci.Cart) 
+                    .HasForeignKey(ci => ci.CartId)
+                    .IsRequired()
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            modelBuilder.Entity<CartItemModel>(entity =>
+            {
+                entity.HasKey(ci => ci.Id);
+                entity.Property(ci => ci.Id)
+                      .ValueGeneratedOnAdd();
+
+                entity.HasOne(ic => ic.Product)
+                      .WithMany()
+                      .HasForeignKey(ic => ic.ProductId)
+                      .OnDelete(DeleteBehavior.Cascade);
+
+            });
         }
     }
 }

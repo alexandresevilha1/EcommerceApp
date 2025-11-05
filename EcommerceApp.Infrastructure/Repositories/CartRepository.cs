@@ -13,16 +13,16 @@ namespace EcommerceApp.Infrastructure.Repositories
 
         public async Task<CartModel> GetCartWithItemsByUserIdAsync(string userId)
         {
-             return await _context.Carts
-                 .FirstOrDefaultAsync(c => c.ApplicationUserId == userId);
+            return await _context.Carts
+                             .Include(c => c.Itens)
+                             .ThenInclude(i => i.Product)
+                             .FirstOrDefaultAsync(c => c.ApplicationUserId == userId);
         }
 
         public async Task<CartModel> GetCartByUserIdAsync(string userId)
         {
             return await _context.Carts
-                .Include(c => c.Itens)
-                .ThenInclude(i => i.Product)
-                .FirstOrDefaultAsync(c => c.ApplicationUserId == userId);
+                            .FirstOrDefaultAsync(c => c.ApplicationUserId == userId);
         }
     }
 }

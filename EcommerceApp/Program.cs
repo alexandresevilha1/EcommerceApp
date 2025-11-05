@@ -17,6 +17,12 @@ if (string.IsNullOrEmpty(connectionString))
     throw new InvalidOperationException("A string de conexão 'DefaultConnection' não foi encontrada.");
 }
 
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseSqlServer(connectionString,
+        b => b.MigrationsAssembly("EcommerceApp.Infrastructure"));
+});
+
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
     options.Password.RequireDigit = false;
@@ -25,34 +31,21 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
     options.Password.RequireNonAlphanumeric = false;
     options.Password.RequiredLength = 6;
 
-    //A setting to block login attempts, a crucial security measure that prevents brute-force attacks.
     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
     options.Lockout.MaxFailedAccessAttempts = 5;
     options.Lockout.AllowedForNewUsers = true;
 })
+    .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
-    //configuration to log out the user due to inactivity
     options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
     options.SlidingExpiration = true;
-
     options.LoginPath = "/Identity/Account/Login";
     options.LogoutPath = "/Identity/Account/Logout";
     options.AccessDeniedPath = "/Identity/Account/AccessDenied";
 });
-
-
-builder.Services.AddDbContext<AppDbContext>(options =>
-{
-    options.UseSqlServer(connectionString,
-        b => b.MigrationsAssembly("EcommerceApp.Infrastructure"));
-});
-
-builder.Services.AddIdentityCore<ApplicationUser>()
-    .AddRoles<IdentityRole>()
-    .AddEntityFrameworkStores<AppDbContext>();
 
 builder.Services.AddAutoMapper(typeof(DTOMappingProfile));
 
@@ -60,15 +53,14 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-
-builder.Services.AddScoped<ICategoryService, CategoryService>();
-builder.Services.AddScoped<IProductService, ProductService>();
-
 builder.Services.AddScoped<ICartRepository, CartRepository>();
 builder.Services.AddScoped<ICartItemRepository, CartItemRepository>();
 
-builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICartService, CartService>();
+
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
@@ -98,14 +90,26 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
+}
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
 app.UseRouting();
+
+app.UseSession();
+
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseSession();
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 app.MapRazorPages();
+
 app.Run();

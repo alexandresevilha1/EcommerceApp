@@ -329,7 +329,7 @@ namespace EcommerceApp.Infrastructure.Migrations
             modelBuilder.Entity("EcommerceApp.Core.Entities.CartItemModel", b =>
                 {
                     b.HasOne("EcommerceApp.Core.Entities.CartModel", "Cart")
-                        .WithMany("Itens")
+                        .WithMany()
                         .HasForeignKey("CartId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -416,11 +416,6 @@ namespace EcommerceApp.Infrastructure.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("EcommerceApp.Core.Entities.CartModel", b =>
-                {
-                    b.Navigation("Itens");
                 });
 
             modelBuilder.Entity("EcommerceApp.Core.Entities.CategoryModel", b =>

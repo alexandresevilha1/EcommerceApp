@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Options;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -11,7 +12,11 @@ namespace EcommerceApp.Core.Entities
     {
         public int Id { get; set; }
         public string ApplicationUserId { get; set; }
-        public ApplicationUser ApplicationUser { get; set; }
-        public ICollection<CartItemModel> Itens { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
+        public virtual ICollection<CartItemModel> Itens { get; set; }
+        public CartModel()
+        {
+            Itens = new List<CartItemModel>();
+        }
     }
 }
