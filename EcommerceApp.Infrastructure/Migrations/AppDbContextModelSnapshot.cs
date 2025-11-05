@@ -156,6 +156,60 @@ namespace EcommerceApp.Infrastructure.Migrations
                     b.ToTable("Categorys");
                 });
 
+            modelBuilder.Entity("EcommerceApp.Core.Entities.OrderItemModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("OrderItems");
+                });
+
+            modelBuilder.Entity("EcommerceApp.Core.Entities.OrderModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ApplicationUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("OrderDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("OrderTotal")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApplicationUserId");
+
+                    b.ToTable("Orders");
+                });
+
             modelBuilder.Entity("EcommerceApp.Core.Entities.ProductModel", b =>
                 {
                     b.Property<int>("Id")
@@ -329,7 +383,7 @@ namespace EcommerceApp.Infrastructure.Migrations
             modelBuilder.Entity("EcommerceApp.Core.Entities.CartItemModel", b =>
                 {
                     b.HasOne("EcommerceApp.Core.Entities.CartModel", "Cart")
-                        .WithMany()
+                        .WithMany("Itens")
                         .HasForeignKey("CartId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -350,6 +404,36 @@ namespace EcommerceApp.Infrastructure.Migrations
                     b.HasOne("EcommerceApp.Core.Entities.ApplicationUser", "ApplicationUser")
                         .WithOne()
                         .HasForeignKey("EcommerceApp.Core.Entities.CartModel", "ApplicationUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationUser");
+                });
+
+            modelBuilder.Entity("EcommerceApp.Core.Entities.OrderItemModel", b =>
+                {
+                    b.HasOne("EcommerceApp.Core.Entities.OrderModel", "Order")
+                        .WithMany("OrderItems")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EcommerceApp.Core.Entities.ProductModel", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("EcommerceApp.Core.Entities.OrderModel", b =>
+                {
+                    b.HasOne("EcommerceApp.Core.Entities.ApplicationUser", "ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("ApplicationUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -418,9 +502,19 @@ namespace EcommerceApp.Infrastructure.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("EcommerceApp.Core.Entities.CartModel", b =>
+                {
+                    b.Navigation("Itens");
+                });
+
             modelBuilder.Entity("EcommerceApp.Core.Entities.CategoryModel", b =>
                 {
                     b.Navigation("Produtos");
+                });
+
+            modelBuilder.Entity("EcommerceApp.Core.Entities.OrderModel", b =>
+                {
+                    b.Navigation("OrderItems");
                 });
 #pragma warning restore 612, 618
         }

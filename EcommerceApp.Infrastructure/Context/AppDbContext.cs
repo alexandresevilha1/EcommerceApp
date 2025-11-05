@@ -12,8 +12,12 @@ namespace EcommerceApp.Infrastructure.Context
 
         public DbSet<ProductModel> Products { get; set; }
         public DbSet<CategoryModel> Categorys { get; set; }
+
         public DbSet<CartModel> Carts { get; set; }
         public DbSet<CartItemModel> CartItems { get; set; }
+
+        public DbSet<OrderModel> Orders { get; set; }
+        public DbSet<OrderItemModel> OrderItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -67,6 +71,27 @@ namespace EcommerceApp.Infrastructure.Context
                       .HasForeignKey(ic => ic.ProductId)
                       .OnDelete(DeleteBehavior.Cascade);
 
+            });
+
+            modelBuilder.Entity<OrderModel>(entity =>
+            {
+                entity.HasOne(o => o.ApplicationUser)
+                      .WithMany()
+                      .HasForeignKey(o => o.ApplicationUserId)
+                      .IsRequired();
+
+                entity.HasMany(o => o.OrderItems)
+                      .WithOne(oi => oi.Order)
+                      .HasForeignKey(oi => oi.OrderId)
+                      .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            modelBuilder.Entity<OrderItemModel>(entity =>
+            {
+                entity.HasOne(oi => oi.Product)
+                      .WithMany()
+                      .HasForeignKey(oi => oi.ProductId)
+                      .OnDelete(DeleteBehavior.NoAction);
             });
         }
     }

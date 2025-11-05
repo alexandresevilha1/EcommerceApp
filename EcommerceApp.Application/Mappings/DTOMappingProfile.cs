@@ -27,6 +27,14 @@ namespace EcommerceApp.Application.Mappings
                            opt => opt.MapFrom(src => src.Product.Price));
 
             CreateMap<CartItemDTO, CartItemModel>();
+
+            CreateMap<OrderItemModel, OrderItemDTO>()
+                .ForMember(dest => dest.ProductName,
+                           opt => opt.MapFrom(src => src.Product.Name))
+                .ForMember(dest => dest.ImageUrl,
+                           opt => opt.MapFrom(src => src.Product.ImageURL));
+
+            CreateMap<OrderModel, OrderDTO>();
         }
     }
 }

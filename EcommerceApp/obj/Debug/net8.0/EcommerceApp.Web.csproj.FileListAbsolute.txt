@@ -270,10 +270,10 @@ C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp\obj\Debug\
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp\obj\Debug\net8.0\Ecommerc.A89F6821.Up2Date
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp\obj\Debug\net8.0\EcommerceApp.Web.dll
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp\obj\Debug\net8.0\refint\EcommerceApp.Web.dll
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp\obj\Debug\net8.0\EcommerceApp.Web.pdb
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp\obj\Debug\net8.0\EcommerceApp.Web.genruntimeconfig.cache
 C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp\obj\Debug\net8.0\ref\EcommerceApp.Web.dll
+C:\Users\A l e x a n d r e\Desktop\Projetos\EcommerceApp\EcommerceApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
