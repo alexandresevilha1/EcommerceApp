@@ -69,6 +69,6 @@ O projeto foi refatorado para seguir estritamente os princípios da **Arquitetur
 * **Arquitetura Limpa (Clean Architecture)** de 4 camadas
 * **Programação Assíncrona** (`async/await`)
 * **Injeção de Dependência (DI)** nativa
-* **AutoMapper** (para mapeamento entre Entidades e DTOs)
-* **Padrão Repositório Genérico (Repository Pattern)**
-* **Padrão Unidade de Trabalho (Unit of Work)**
+* **AutoMapper**
+* **Repository Pattern**
+* **Unit of Work**
